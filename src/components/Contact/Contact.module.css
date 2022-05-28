@@ -1,0 +1,32 @@
+.list {
+  display: contents;
+  justify-content: center;
+  width: 600px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 12px 24px;
+  background-color: indigo;
+  color: white;
+  font-weight: 500;
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(142, 6, 221, 0.15);
+  background-color: rgb(70, 8, 114);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
