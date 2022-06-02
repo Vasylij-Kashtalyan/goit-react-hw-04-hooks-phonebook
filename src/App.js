@@ -20,6 +20,7 @@ class App extends Component {
     filter: "",
     showModal: false,
   };
+
   componentDidMount() {
     const contacts = localStorage.getItem("contacts");
     const parsedContacts = JSON.parse(contacts);
@@ -33,9 +34,9 @@ class App extends Component {
     const stateContact = this.state.contacts;
     const nextContact = this.state.contacts;
     const prevContact = prevState.contacts;
-    
+
     if (stateContact !== prevState.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(stateContact))
+      localStorage.setItem("contacts", JSON.stringify(stateContact));
     }
 
     if (nextContact.length > prevContact.length) {
@@ -92,13 +93,12 @@ class App extends Component {
   render() {
     const { filter } = this.state;
 
-
     return (
       <Container>
         {/* <IconButton onClick={this.handlerModal} aria-label="Добавить contact"> 
             <AddIcon width="35" height="35" fill="#fff"/>
         </IconButton> */}
-        
+
         <Section title="Phonebok">
           <Form onSubmit={this.handlerSubmitForm} />
         </Section>
@@ -113,7 +113,7 @@ class App extends Component {
         </Section>
       </Container>
     );
-  };
-};
+  }
+}
 
 export default App;
